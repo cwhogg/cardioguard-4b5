@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #DC2626;
+  --color-primary-light: #FCA5A5;
+  --color-background: #0F172A;
+  --color-background-elevated: #1E293B;
+  --color-text: #F8FAFC;
+  --color-text-secondary: #CBD5E1;
+  --color-text-muted: #64748B;
+  --color-accent: #10B981;
+  --color-border: #334155;
+  --font-inter: Inter, system-ui, sans-serif;
+  --font-jetbrains-mono: 'JetBrains Mono', monospace;
+}
+
+.font-inter {
+  font-family: var(--font-inter);
+}
+
+.font-jetbrains-mono {
+  font-family: var(--font-jetbrains-mono);
+}
+
+.prose {
+  @apply text-text-secondary leading-relaxed;
+}
+
+.prose h1 {
+  @apply text-text font-bold text-3xl mb-4;
+}
+
+.prose h2 {
+  @apply text-text font-semibold text-2xl mb-3 mt-8;
+}
+
+.prose h3 {
+  @apply text-text font-medium text-xl mb-2 mt-6;
+}
+
+.prose p {
+  @apply mb-4;
+}
+
+.prose a {
+  @apply text-accent underline hover:text-primary-light transition-colors;
+}
+
+.prose ul {
+  @apply list-disc pl-6 mb-4;
+}
+
+.prose ol {
+  @apply list-decimal pl-6 mb-4;
+}
+
+.prose li {
+  @apply mb-2;
+}
+
+.prose code {
+  @apply bg-background-elevated px-2 py-1 rounded text-sm font-jetbrains-mono;
+}
+
+.prose pre {
+  @apply bg-background-elevated p-4 rounded-lg overflow-x-auto mb-4;
+}
+
+.prose blockquote {
+  @apply border-l-4 border-border pl-4 italic text-text-muted;
+}
